@@ -28,7 +28,7 @@ my %ttk_widgets = (
     TtkEntry       => 'tent',
     TtkFrame       => 'tfrm',
     TtkLabelframe  => 'tlfr',
-    TtkNoteBook    => 'tnb',
+    TtkNotebook    => 'tnb',
     TtkScrollbar   => 'tsb',
     TtkCombobox    => 'tcbo',
     TtkProgressbar => 'tprg',
@@ -44,7 +44,7 @@ my %ttk_widgets = (
 while (my ($method, $prefix) = each %ttk_widgets) {
     my $w;
     eval {
-        $w = $mw->$method()->pack;
+        $w = $mw->$method()->pack(-side=>'top');
     };
     
     ok(defined($w) && !$@, "Widget method call: $method");
