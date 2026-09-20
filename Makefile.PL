@@ -63,7 +63,7 @@ EOS
     unless ($res =~ /^ok3/m) {
         warn <<EOS;
 
-Your Tcl/Tk installation lacks the 'tklib' package. This package is highly 
+Your Tcl/Tk installation lacks the 'tklib' package. This package is highly
 recommended because it provides 'tooltip::tooltip' for widget hints. You
 can ignore this warning if you either have tooltip::tooltip on your system
 or do not plan to use this functionality.

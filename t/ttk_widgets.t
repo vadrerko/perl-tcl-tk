@@ -47,12 +47,12 @@ while (my ($method, $prefix) = each %ttk_widgets) {
         $lab = $mw->Label(-text=>$method)->pack(-side=>'top');
         $w = $mw->$method()->pack(-side=>'top');
     };
-    
+
     ok(defined($w) && !$@, "Widget method call: $method");
 
     $w->interp->update;
     sleep 1;
-        
+
     $w->destroy if defined $w;
     $lab->destroy if defined $lab;
 }
