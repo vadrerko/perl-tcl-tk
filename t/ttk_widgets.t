@@ -42,14 +42,19 @@ my %ttk_widgets = (
 
 # 2. Test widget factory methods sequentially
 while (my ($method, $prefix) = each %ttk_widgets) {
-    my $w;
+    my ($lab,$w);
     eval {
+        $lab = $mw->Label(-text=>$method)->pack(-side=>'top');
         $w = $mw->$method()->pack(-side=>'top');
     };
     
     ok(defined($w) && !$@, "Widget method call: $method");
+
+    $w->interp->update;
+    sleep 1;
         
     $w->destroy if defined $w;
+    $lab->destroy if defined $lab;
 }
 
 $mw->after(3000,sub{$mw->destroy});
