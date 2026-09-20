@@ -1,5 +1,28 @@
 Revision history for Perl extension Tcl::Tk.
 
+1.52	20-sept-2026
+	widgets like ttk::frame better supported
+	new widgets:
+	    TtkCheckbutton => ['ttk::checkbutton', 'tchk'],
+	    TtkButton      => ['ttk::button',      'tbtn'],
+	    TtkRadiobutton => ['ttk::radiobutton', 'trdb'],
+	    TtkLabel       => ['ttk::label',       'tlbl'],
+	    TtkEntry       => ['ttk::entry',       'tent'],
+	    TtkFrame       => ['ttk::frame',       'tfrm'],
+	    TtkLabelframe  => ['ttk::labelframe',  'tlfr'],
+	    TtkNotebook    => ['ttk::notebook',    'tnb'],
+	    TtkScrollbar   => ['ttk::scrollbar',   'tsb'],
+	    TtkCombobox    => ['ttk::combobox',    'tcbo'],
+	    TtkProgressbar => ['ttk::progressbar', 'tprg'],
+	    TtkScale       => ['ttk::scale',       'tscl'],
+	    TtkSeparator   => ['ttk::separator',   'tsep'],
+	    TtkSizegrip    => ['ttk::sizegrip',    'tsz'],
+	    TtkTreeview    => ['ttk::treeview',    'ttv', undef, {}, ['children']],
+	    TtkPanedwindow => ['ttk::panedwindow', 'tpw'],
+	    TtkSpinbox     => ['ttk::spinbox',     'tspn'],
+	WARNING:
+	next code change will probably reconsider 'scrolled' implementation to avoid snit usage
+
 1.51	28-jan-2025
 	No code change: confirmed Tcl9, minor doc tweaks + show Tcl/Tk version in tests
 

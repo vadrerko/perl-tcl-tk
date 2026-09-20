@@ -18,6 +18,7 @@ t/folder.xpm
 t/ptk-compat.t	file to check for perlTk compatibility
 t/Tk.xbm
 t/tk-mw.t
+t/ttk_widgets.t
 t/Xcamel.gif
 t/text.t
 t/canvas.t
