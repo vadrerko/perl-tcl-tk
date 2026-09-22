@@ -45,9 +45,9 @@ Or
 
 The C<Tcl::Tk> module provides access to the Tk library within Tcl/Tk
 installation. By using this module an interpreter object created, which
-then gain access to entire variety of installed Tcl libraries (Tk, Tix,
-BWidgets, BLT, etc) and existing features (for example natively looking
-widgets using C<tile>).
+then gain access to the Tk package with support of native look through ttk::*
+widgets, as well as entire variety of other installed Tcl/Tk libraries
+(treectrl, BLT, BWidgets, Tix, etc).
 
 =head2 Prerequisites
 
@@ -1466,7 +1466,7 @@ my %ptk2tcltk = (
     TtkScale       => ['ttk::scale',       'tscl'],
     TtkSeparator   => ['ttk::separator',   'tsep'],
     TtkSizegrip    => ['ttk::sizegrip',    'tsz'],
-    TtkTreeview    => ['ttk::treeview',    'ttv', undef, {}, ['children']],
+    TtkTreeview    => ['ttk::treeview',    'ttv', undef, {}, ['children', 'focus']],
     TtkPanedwindow => ['ttk::panedwindow', 'tpw'],
     TtkSpinbox     => ['ttk::spinbox',     'tspn'],
 
