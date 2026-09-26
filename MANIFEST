@@ -22,6 +22,7 @@ t/ttk_widgets.t
 t/Xcamel.gif
 t/text.t
 t/canvas.t
+t/calendar.t
 t/unicode.t		some unicode tests
 t/zzPhoto.t
 demos/wcolors.pl	demo script with syntax very similar to perlTk
